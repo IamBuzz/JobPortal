@@ -1,12 +1,12 @@
 package com.ie2.jobportal;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
+
+import androidx.appcompat.app.AppCompatActivity;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -26,19 +26,12 @@ public class MainActivity extends AppCompatActivity {
         password = findViewById(R.id.login_password);
 
         btnLogin = findViewById(R.id.btn_login);
-        btnRegistration = findViewById((R.id.btn_registration));
+        btnRegistration = findViewById((R.id.btn_reg));
 
-        btnLogin.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-            }
+        btnLogin.setOnClickListener(v -> {
+            Toast.makeText(getApplicationContext(),"User Logged in Successfully", Toast.LENGTH_SHORT).show();
+            startActivity(new Intent(getApplicationContext(), HomeActivity.class));
         });
-        btnRegistration.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), RegistrationActivity.class));
-            }
-        });
+        btnRegistration.setOnClickListener(v -> startActivity(new Intent(getApplicationContext(), RegistrationActivity.class)));
     }
 }

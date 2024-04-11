@@ -47,21 +47,6 @@
                 android:id="@+id/btn_registration"
                 android:layout_margin="10dp"
                 />
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="OR"
-                android:gravity="center"
-                android:padding="10dp"
-                android:textAppearance="?android:textAppearanceLarge"
-                />
-            <Button
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Log In"
-                android:layout_margin="10dp"
-                android:textAppearance="?android:textAppearanceMedium"
-                android:id="@+id/btn_login"/>
         </LinearLayout>
     </ScrollView>
 </LinearLayout>
