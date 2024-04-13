@@ -1,10 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:orientation="vertical"
+
+    android:gravity="center"
     android:layout_height="match_parent"
     tools:context=".HomeActivity">
 
-  </androidx.constraintlayout.widget.ConstraintLayout>
+    <include layout="@layout/toolbar"
+        android:id="@+id/toolbar_home"/>
+    
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:gravity="center"
+
+        android:layout_height="match_parent">
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="See All Job Post"
+            android:backgroundTint="@android:color/darker_gray"
+
+            android:background="@drawable/custom_button"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:id="@+id/btn_allJob"
+            />
+        
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:text="Post A Job"
+            android:background="@drawable/custom_button"
+            android:backgroundTint="@android:color/darker_gray"
+            android:textColor="@android:color/black"
+            android:textAppearance="?android:textAppearanceMedium"
+            android:id="@+id/btn_PostJob"
+
+            />
+        
+        
+        
+    </LinearLayout>
+
+
+
+
+
+
+</LinearLayout>
